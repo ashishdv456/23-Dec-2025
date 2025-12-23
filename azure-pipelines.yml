@@ -19,11 +19,9 @@ stages:
             backendAzureRmStorageAccountName: 'ashish23dec2025'
             backendAzureRmContainerName: 'asihshcon'
             backendAzureRmKey: 'ashishkey.tfstate'
-        - task: SonarQubePublish@8
-          displayName: sonar
-          continueOnError: true
+        - task: tfsec@1
           inputs:
-            pollingTimeoutSec: '300'
+            version: 'v1.26.0'
         - task: TerraformTask@5
           displayName: plan
           inputs:
