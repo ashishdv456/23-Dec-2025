@@ -9,6 +9,15 @@ stages:
         - task: TerraformInstaller@1
           inputs:
             terraformVersion: 'latest'
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'init'
+            backendServiceArm: 'Dec_2225'
+            backendAzureRmResourceGroupName: 'Ashish_storage'
+            backendAzureRmStorageAccountName: 'ashish23dec2025'
+            backendAzureRmContainerName: 'asihshcon'
+            backendAzureRmKey: 'ashishkey.tfstate'
         
 
 
