@@ -25,6 +25,13 @@ stages:
             provider: 'azurerm'
             command: 'plan'
             environmentServiceNameAzureRM: 'Dec_2225'
+        - task: TerraformTask@5
+          displayName: apply
+          inputs:
+            provider: 'azurerm'
+            command: 'apply'
+            environmentServiceNameAzureRM: 'Dec_2225'
+
         
 
 
