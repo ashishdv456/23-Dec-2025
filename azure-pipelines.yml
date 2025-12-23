@@ -20,6 +20,7 @@ stages:
             backendAzureRmContainerName: 'asihshcon'
             backendAzureRmKey: 'ashishkey.tfstate'
         - task: SonarQubePublish@8
+          displayName: sonar
           inputs:
             pollingTimeoutSec: '300'
         - task: TerraformTask@5
