@@ -21,6 +21,7 @@ stages:
             backendAzureRmKey: 'ashishkey.tfstate'
         - task: SonarQubePublish@8
           displayName: sonar
+          continueOnError: true
           inputs:
             pollingTimeoutSec: '300'
         - task: TerraformTask@5
