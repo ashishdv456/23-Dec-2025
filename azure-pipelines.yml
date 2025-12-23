@@ -19,10 +19,9 @@ stages:
             backendAzureRmStorageAccountName: 'ashish23dec2025'
             backendAzureRmContainerName: 'asihshcon'
             backendAzureRmKey: 'ashishkey.tfstate'
-        - task: SonarQubeAnalyze@8
-          displayName: sonarqbube
+        - task: SonarQubePublish@8
           inputs:
-            jdkversion: 'JAVA_HOME_17_X64'
+            pollingTimeoutSec: '300'
         - task: TerraformTask@5
           displayName: plan
           inputs:
