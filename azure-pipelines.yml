@@ -20,6 +20,7 @@ stages:
             backendAzureRmContainerName: 'asihshcon'
             backendAzureRmKey: 'ashishkey.tfstate'
         - task: SonarQubeAnalyze@8
+          displayName: sonarqbube
           inputs:
             jdkversion: 'JAVA_HOME_17_X64'
         - task: TerraformTask@5
